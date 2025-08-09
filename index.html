@@ -1,60 +1,681 @@
+
+<!--
+
+    Livetell - Encurtando Distâncias! - copright © 2021
+
+    Desenvolvido por: Paulo Vitor Francisco
+
+    Todos os direitos Reservados
+
+-->
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-        <title>Livetell - Encurtando Distâncias!</title>
-        <style>
-            body{
-                background: #fff;
-            }
-            .mapa{
-                width: 650px;
-                height: 200px;
-            }
-
-            .lead{
-                font-weight: bold;
-            }
-
-            span{
-                color: #1034d3;
-            }
-            
-            ul{
-                list-style: none
-            }
-
-            .img_logo {
-                height: 200px;
-            }
-        </style>
-    </head>
-    <body>
-        <center><img class="img_logo" src="logo_livetell.jpg" alt="">
-        <h3>Livetell - Encurtando distâncias!</h3>
-        <p>Empresa de telecomunicações especializada em:</p>
-        <ul>
-            <li>Soluções para internet rural de alta velocidade telefonia rural sem fio;</li>
-            <li>Câmeras de segurança;</li>
-            <li>TV digital via satélite e terrestre;</li>
-            <li>Serviços em telecom e informática</li>
-        </ul>
-        <p>Nosso site está em manutenção. Mas logo estaremos de volta, trazendo todas as
-            informações sobre nossos produtos e serviços :)
-        </p>
-        <p>Para mais informações, entre em contato conosco, através do nosso e-mail ou telefone (WhatsApp)</p></center>
-        <div class="div_mapa">
-            <center>
-                <p class="lead">Email e Skype: <span>livetell@outlook.com.br</span></p>
-                <p class="lead">Telefone: <span>(32)99961-6080</span></p>
-                <p class="lead">Antônio Carlos - MG</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7433.585821665981!2d-43.74891321629919!3d-21.31919770685393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa21e890655fde5%3A0x93d1f6fdf0587935!2sAnt%C3%B4nio+Carlos+-+MG!5e0!3m2!1spt-BR!2sbr!4v1430596326898" frameborder="0" class="mapa"></iframe><br />
-            </center>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Livetell - Encurtando Distâncias!" />
+    <meta
+      property="og:description"
+      content="Site com os produtos e serviços Livetell"
+    />
+    <meta property="og:url" content="http://livetell.com.br/" />
+    <meta property="og:site_name" content="Livetell - Encurtando Distâncias!" />
+    <meta
+      name="author"
+      content="Paulo Vitor Francisco"
+      data-react-helmet="true"
+    />
+    <meta
+      name="dcterms.rightsHolder"
+      content="Paulo Vitor Francisco"
+      data-react-helmet="true"
+    />
+    <meta
+      name="keywords"
+      content="Livetell, internet, telefonia, câmeras de segurança, serviços de internet, internet rural, segurança residencial, segurança comercial, internet de alta velocidade, manutenção, reparo de computadores"
+      data-react-helmet="true"
+    />
+    <title>Livetell - Encurtando Distâncias!</title>
+    <meta
+      name="description"
+      content="Livetell, Encurtando Distâncias"
+      data-react-helmet="true"
+    />
+    <meta
+      name="description"
+      content="Sua melhor opção em telecomunicações"
+      data-react-helmet="true"
+    />
+    <meta
+      name="description"
+      content="Internet rural de alta qualidade"
+      data-react-helmet="true"
+    />
+    <meta
+      name="description"
+      content="Serviços de manutenção em computadores"
+      data-react-helmet="true"
+    />
+    <meta
+      name="description"
+      content="Câmeras de segurança no seu estabelecimento comercial"
+      data-react-helmet="true"
+    />
+    <meta
+      name="description"
+      content="Câmeras de segurança na sua residência, fazenda ou sítio"
+      data-react-helmet="true"
+    />
+    <meta
+      name="description"
+      content="Intenet de alta velicidade, para uma ótima esperiência"
+      data-react-helmet="true"
+    />
+    <meta
+      name="description"
+      content="Telefonia rual para fazendas sítios e residências"
+      data-react-helmet="true"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" media="all" href="./css/application.css" data-turbolinks-track="true" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/external/jquery/jquery.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/produto.js"></script>
+    <script type="text/javascript" src="./js/caixa_dilalogo.js"></script>
+    <script type="text/javascript" src="./js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="./js/site.js"></script>
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="ZMxTBuyjqgei8Wn5oABqSxLJ1FTMNOmUA5ZE9/aScaIDj7FboJhCwYPt3kPh2OA1Hbp8iJmgdxDpGy/apuup6w==" /> 
+  </head>
+  <body>
+    <div id="carregando" class="container-carregando">
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        data-icon="spinner"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+        class="svg-inline--fa fa-spinner fa-w-16 fa-spin fa-lg icone-carregando"
+      >
+        <path
+          fill="currentColor"
+          d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"
+          class=""
+        ></path>
+      </svg>
+    </div>
+    <header>
+      <nav id="menu_site" class="navbar navbar-expand-lg navbar-light bg-light container-menu">
+        <div id="container-icone-menu" class="navbar-brand container-logo-menu">
+          <img alt="Logo menu Livetell" onclick="location.href='/'" class="icone-menu" id="icone_menu_principal" src="./img/logo_transparente_topo1.png" />
         </div>
-        <script type="text/javascript">
+        <button id="btnMenuMobile" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul id="lista_navbar_site" class="navbar-nav lista-menu">
+              <li id="opc_home" class="nav-item item-lista-menu" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="nav-link link-item-lista-menu" onclick="location.href='/#home'">Home</a>
+              </li>
+              <li id="opc_produtos" class="nav-item item-lista-menu" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="nav-link link-item-lista-menu" onclick="location.href='/#produtos'">Produtos/Serviços</a>
+              </li>
+              <li id="opc_teste" class="nav-item item-lista-menu" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="nav-link link-item-lista-menu" onclick="location.href='/#teste'">Teste Conexão</a>
+              </li>
+              <li id="opc_faca" class="nav-item item-lista-menu" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="nav-link link-item-lista-menu" onclick="location.href='/#faca'">Faça Parte</a>
+              </li>
+              <li id="opc_quem" class="nav-item item-lista-menu" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="nav-link link-item-lista-menu" onclick="location.href='/#quem'">Quem Somos</a>
+              </li>
+              <li id="opc_whatsapp" class="nav-item item-lista-menu oculto" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="nav-link link-item-lista-menu" onclick="redirecionaWhatsApp('5532999616080');">Fale pelo WhatsApp</a>
+              </li>
+              <li id="opc_email" class="nav-item item-lista-menu oculto" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="nav-link link-item-lista-menu" onclick="abreEmail('livetell@outlook.com.br');">Envie um E-mail</a>
+              </li>
+              <li id="opc_mercado_livre" class="nav-item item-lista-menu oculto" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="nav-link link-item-lista-menu" onclick="redirecionaSiteMercadoLivre('');">Livetell no Mercado livre</a>
+              </li>
+              <li id="opc_galeria" class="nav-item item-lista-menu" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="nav-link link-item-lista-menu" href="" target="_blank">Galeria</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-        </script>
-    </body>
+    <div class="barra-direita">
+      <ul class="lista-barra-direita">
+        <li class="item-lista-barra-direita" onclick="redirecionaWhatsApp('5532999616080');">
+          <div class="link-barra-lateral primeira-div-barra-direita">
+            <i class="fab fa-whatsapp icone-barra-lateral icone-whatsapp-barra-lateral"></i>
+          </div>
+          <div class="subitem-lista-barra-direita">
+            <span class="label-subitem-lista-barra-direita">Fale conosco pelo WhatsApp</span>
+          </div>
+        </li>
+        <li class="item-lista-barra-direita" onclick="abreEmail('livetell@outlook.com.br');">
+          <div class="link-barra-lateral">
+            <i class="fa fa-envelope-open icone-barra-lateral icone-email-barra-lateral"></i>
+          </div>
+          <div class="subitem-lista-barra-direita">
+            <span class="label-subitem-lista-barra-direita">Entre em contato por e-mail</span>
+          </div>
+        </li>
+        <li class="item-lista-barra-direita" onclick="location.href='#teste';">
+          <div class="link-barra-lateral">
+            <i class="fas fa-tachometer-alt icone-barra-lateral icone-teste-barra-lateral"></i>
+          </div>
+          <div class="subitem-lista-barra-direita">
+            <span class="label-subitem-lista-barra-direita">Teste a velocidade de sua internet</span>
+          </div>
+        </li>
+        <li class="item-lista-barra-direita ultimo-item-lista-barra-direita" onmouseover="hover();" onmouseout="unhover();" onclick="redirecionaSiteMercadoLivre('');">
+          <div class="link-barra-lateral ultima-div-barra-direita">
+            <img alt="icone mercado livre" class="icone-barra-lateral-mercado-livre" id="logo_mercado_livre_cinza" src="./img/logo-mercado-livre-cinza.png" />
+            <img alt="icone mercado livre" class="icone-barra-lateral-mercado-livre oculto" id="logo_mercado_livre" src="./img/logo-mercado-livre.png" />
+          </div>
+          <div class="subitem-lista-barra-direita">
+            <span class="label-subitem-lista-barra-direita">Livetell no Mercado Livre</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="pagina-site">
+      <div class="subpagina-site" onscroll="capturaScroll(this);">
+        <div class="banner-parallax">
+          <div class="conteudo-banner-parallax"></div>
+        </div>
+
+        <section class="sessao-site sessao1" id="home">
+          <div class="container-esquerdo-sessao1">
+            <div class="subcontainer-esquerdo-sessao1">
+              <p class="estilo-texto-titulo texto-titulo-livetell">Livetell</p>
+              <p class="estilo-texto-titulo texto-subtitulo-livetell">Encurtando Distâncias!</p>
+              <p class="estilo-texto-titulo texto-descricao-livetell">Sua melhor opção em Telecomunicações</p>
+              <button onclick="location.href='#produtos';" class="botao-saiba-mais">Saiba Mais&nbsp;&nbsp;<i class="fas fa-caret-down"></i></button>
+            </div>
+          </div>
+        </section>
+
+        <section class="sessao-site sessao2" id="produtos">
+          <div class="contaier-esquerdo-sessao2">
+            <div class="subcontaier-esquerdo-sessao2">
+              <p class="titulo-sessao2">Produtos e Serviços Livetell</p>
+              <hr class="linha-divisoria-sessao2">
+              <p class="subtitulo-sessao2">Aqui você encontra todos os nossos produtos e serviços,
+                por um preço que cabe no seu bolso.</p>
+              <hr class="linha-divisoria-sessao2">
+              <p class="texto-corpo-sessao2">A Livetell trabalha pensando na sua satisfação. Por isso oferecemos produtos
+                de última geração, e com alto nível de qualidade. Ao solicitar os nossos serviços, você
+                se tornará mais do que um cliente, e sim, um parceiro da Livetell. Você terá à sua disposição
+                toda a garantia e suporte dos produtos e serviços adquiridos. Não perca tempo e venha conferir! </p>
+            </div>
+          </div>
+          <div class="contaier-direito-sessao2">
+            <div class="container slide-produtos">
+              <div class="grupo-slide-produtos">
+                <div id="carouselExampleIndicators" class="carousel slide slide-bootstrap-sessao2" data-ride="carousel">
+                  <div id="carousel_produtos" class="carousel-inner container-slide-bootstrap-sessao2"></div>
+                  <div class="grupo-selecao-slides">
+                    <ol id="indicador_carousel_produtos" class="carousel-indicators lista-grupo-selecao-slides"></ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sessao-site sessao3 banner-parallax-gif" id="espacador1">
+          <div class="conteudo-banner-parallax-gif">
+            <video id="video_parallax" class="video-banner-parallax-gif" loop="true" autoplay="autoplay" controls muted>
+              <source src="./img/banner_video.mp4" type="video/mp4">
+              <source src="./img/banner_video.webm" type="video/webm">
+            </video>
+          </div>
+        </section>
+
+        <section class="sessao-site sessao4" id="teste">
+          <img alt="fundo sessão teste de velocidade" class="imagem-fundo-sessao4" src="./img/banner_fundo2.jpg" />
+          <div class="container-medidor-velocidade">
+            <div class="subcontaier-medidor-velocidade">
+              <div class="container-titulo-medidor">
+                <p class="titulo-sessao4">Teste <b>aqui</b> a sua conexão com a internet</p>
+              </div>
+              <iframe id="iframe_medidor" class="iframe-medidor" src="https://openspeedtest.com/Get-widget.php"></iframe>
+              <div class="container-botao-recarregar">
+                <button class="botao-recarregar-teste" onclick="recarregarTesteVelocidade();">Novo Teste</button>
+              </div>
+              <div class="container-creditos-medidor">
+                Provided by  <a href="http://openspeedtest.com" target="_blank">OpenSpeedtest.com</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sessao-site sessao5" id="faca">
+          <div class="subcontaier-titulo-sessao5">
+            <p class="titulo-sessao5">A <b>Livetell</b> está cada vez mais perto de você!</p>
+            <p class="subtitulo-sessao5">Venha fazer parte desta nova tendência de internet, telefonia,
+              segurança e tecnologia, que está conquistando cada vez mais clientes em toda região..</p>
+          </div>
+          <div class="subcontaier-numeros-sessao5">
+            <div id="box1" class="box-superior-esquerdo-sessao5">
+              <div class="container-box-textos">
+                <p class="texto-numeros-status">18</p>
+                <p class="texto-descricao-status">Distritos Atendidos</p>
+              </div>
+            </div>
+            <div id="box2" class="box-superior-direito-sessao5">
+              <div class="container-box-textos">
+                <p class="texto-numeros-status">1422</p>
+                <p class="texto-descricao-status">Clientes Fidelizados</p>
+              </div>
+            </div>
+            <div id="box3" class="box-inferior-esquerdo-sessao5">
+              <div class="container-box-textos">
+                <p class="texto-numeros-status">30</p>
+                <p class="texto-descricao-status">Produtos/Serviços Oferecidos</p>
+              </div>
+            </div>
+            <div id="box4" class="box-inferior-direito-sessao5">
+              <div class="container-box-textos">
+                <p class="texto-numeros-status">352</p>
+                <p class="texto-descricao-status">Parcerias Concretizadas</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sessao-site sessao6" id="quem">
+          <div class="fundo-sessao6"></div>
+          <div class="container-titulo-sessao6">
+            <p class="titulo-sessao6">Afinal de contas, quem é a <b>Livetell</b>?</p>
+          </div>
+          <div class="grupo-baloes-sessao6"></div>
+        </section>
+
+        <footer class="sessao-site rodape">
+          <div class="container-rodape">
+            <div class="subcontainer-rodape-esquerdo">
+              <p class="titulo-rodape"><b>Livetell</b></p>
+              <p class="subtitulo-rodape"><b>Encurtando distâncias!</b></p>
+              <p class="texto-rodape-normal">Sua melhor opção em telecomunicações</p>
+              <p class="texto-rodape-menor">
+                <img alt="icone livetell rodape" class="icone-rodape" src="./img/logo_menor.jpg" />
+                &copy; <label id="ano_atual"></label> - Todos os direitos reservados
+              </p>
+            </div>
+            <div class="subcontainer-rodape-centro">
+              <p class="subtitulo-rodape texto-centro-rodape"><b>Entre em contato conosco:</b></p>
+              <ul class="lista-contatos">
+                <li class="item-lista-contatos item-cursor" onclick="redirecionaWhatsApp('5532999616080');"><i class="fas fa-phone-alt icone-lista-contatos"></i><p class="texto-item-lista-contatos">(32) 9 9961-6080</p></li>
+                <li class="item-lista-contatos item-cursor" onclick="abreEmail('livetell@outlook.com.br');"><a class="link-lista-contato"><i class="fas fa-at icone-lista-contatos"></i><p class="texto-item-lista-contatos">livetell@outlook.com.br</p></li>
+                <li class="item-lista-contatos item-cursor"><i class="fas fa-clock icone-lista-contatos"></i><p class="texto-item-lista-contatos">De seg. a sex. 08:00 às 18:00 </p></li>
+                <li class="item-lista-contatos item-cursor"><a class="link-lista-contato" href="https://www.google.com.br/maps/place/Ant%C3%B4nio+Carlos,+MG,+36220-000/@-21.3231706,-43.7583235,15z/data=!3m1!4b1!4m5!3m4!1s0xa21e890655fde5:0x93d1f6fdf0587935!8m2!3d-21.3191528!4d-43.7502275" target="_blank"><i class="fas fa-map-marked-alt icone-lista-contatos"></i><p class="texto-item-lista-contatos">Antônio Carlos - MG</p></a></li>
+              </ul>
+            </div>
+            <div class="subcontainer-rodape-direito">
+              <p class="subtitulo-rodape texto-centro-rodape texto-mapa-site"><b>Mapa do site:</b></p>
+              <ul class="lista-mapa-site">
+                <li class="item-lista-mapa-site"><p class="texto-item-lista-mapa-site"><a class="link-mapa-site" onclick="location.href='/#faca'">Faça Parte</a></p></li>
+                <li class="item-lista-mapa-site"><p class="texto-item-lista-mapa-site"><a class="link-mapa-site" href="" target="_blank">Galeria</a></p></li>
+                <li class="item-lista-mapa-site"><p class="texto-item-lista-mapa-site"><a class="link-mapa-site" onclick="location.href='/#home'">Home</a></p></li>
+                <li class="item-lista-mapa-site"><p class="texto-item-lista-mapa-site"><a class="link-mapa-site" onclick="location.href='/politica_privacidade'">Politica de Privacidade</a></p></li>
+                <li class="item-lista-mapa-site"><p class="texto-item-lista-mapa-site"><a class="link-mapa-site" onclick="location.href='/#produtos'">Produtos/Serviços</a></p></li>
+                <li class="item-lista-mapa-site"><p class="texto-item-lista-mapa-site"><a class="link-mapa-site" onclick="location.href='/#quem'">Quem Somos</a></p></li>
+                <li class="item-lista-mapa-site"><p class="texto-item-lista-mapa-site"><a class="link-mapa-site" onclick="location.href='/#teste'">Teste de Conexão</a></p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="container-creditos"></div>
+        </footer>
+      </div>
+    </div>
+
+    <div id="btn_topo" class="oculto">
+      <i class="fa fa-angle-up icone-botao-voltar-topo"></i>
+    </div>
+    <div id="btn_whatsapp" class="oculto" onclick="redirecionaWhatsApp('5532999616080');">
+      <i class="fab fa-whatsapp icone-botao-whatsapp-topo"></i>
+    </div>
+    <div class="modal fade" id="contaier_slide_produto_detalhado" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-produto-detalhado" role="document">
+        <div class="modal-content modal-content-produto-detalhado">
+          <div class="modal-produto-detalhado">
+            <div class="modal-header container-cabecalho-modal-produto-detalhado">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="container-imagem-modal-produto-detalhado">
+              <div id="carouselImagemProdutoDetalhado" class="carousel slide slide-bootstrap-sessao2" data-ride="carousel">
+                <div id="lista_imagens_produto_detalhado" class="carousel-inner container-slide-bootstrap-sessao2"></div>
+                <div class="grupo-selecao-slides grupo-produto-detalhado">
+                  <ol id="indicador_lista_imagens_produto_detalhado" class="carousel-indicators lista-grupo-selecao-slides"></ol>
+                </div>
+              </div>
+            </div>
+            <div class="container-texto-modal-produto-detalhado">
+              <p id="titulo_produto_detalhado" class="titulo-modal-produto-detalhado"></p>
+              <p id="descricao_produto_detalhado" class="descricao-modal-produto-detalhado"></p>
+              <p id="url_produto_detalhado" class="descricao-modal-produto-detalhado"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $("#carregando").attr("class", "oculto");
+      $(document).ready(function() {
+        $('div.modal').on('show.bs.modal', function() {
+          const modal = this;
+          const hash = modal.id;
+          window.location.hash = hash;
+          window.onhashchange = function() {
+            if (!location.hash){
+              $(modal).modal('hide');
+            }
+          }
+        });
+        $('div.modal').on('hidden.bs.modal', function() {
+          const hash = this.id;
+          history.replaceState('', document.title, window.location.pathname);
+        });
+        // when close button clicked simulate back
+        $('div.modal button.close').on('click', function() {
+          $(this).modal('hide');
+        })
+        // when esc pressed when modal open simulate back
+        $('div.modal').keyup(function(e) {
+          if (e.keyCode == 27){
+            $(this).modal('hide');
+          }
+        });
+      });
+
+      document.getElementById('video_parallax').controls = false;
+      $("#ano_atual").text(new Date().getFullYear());
+      let html = "";
+
+      if(broeseMobile()){
+        html += '<div id="carouselExampleIndicators3" class="carousel slide slide-sessao6-mobile" data-ride="carousel">';
+        html += '    <div class="carousel-inner carousel-inner container-slide-bootstrap-sessao2">';
+        html += '        <div class="carousel-item item-slide-sessao6-mobile active">';
+        html += '            <div class="container-baloes sessao6-container1 container-baloes-mobile">';
+        html += '                <div class="balao balao-verde balao-verde-mobile">';
+      }else{
+        html += '            <div class="container-baloes sessao6-container1">';
+        html += '                <div class="balao balao-verde">';
+      }
+      html += '                        <div class="conteudo-balao css-typing">';
+      html += '                            <i class="fas fa-medal icone-balao-conversa"></i><br>';
+      html += '                            <p id="balao1" class="texto-baloes">';
+      html += '                                <img id="emoji_like" alt="Emoji Like" class="emoji-sessao6 oculto" src="./img/icone-like.png" />';
+      html += '                            </p>';
+      html += '                        </div>';
+      html += '                   </div>';
+      html += '                </div>';
+      if(broeseMobile()){
+        html += '        </div>';
+
+        html += '        <div class="carousel-item item-slide-sessao6-mobile">';
+        html += '            <div class="container-baloes sessao6-container2 container-baloes-mobile">';
+        html += '                <div class="balao balao-branco balao-branco-mobile">';
+      }else{
+        html += '            <div class="container-baloes sessao6-container2">';
+        html += '                <div class="balao balao-branco">';
+      }
+      html += '                        <div class="conteudo-balao">';
+      html += '                            <i class="fas fa-handshake icone-balao-conversa"></i><br>';
+      html += '                            <p id="balao2" class="texto-baloes">';
+      html += '                                <img id="emoji_forca" alt="Emoji Força" class="emoji-sessao6" src="./img/icone-forca.png" />';
+      html += '                                <img id="emoji_sorriso" alt="Emoji Sorriso" class="emoji-sessao6" src="./img/icone-sorriso.png" />';
+      html += '                            </p>';
+      html += '                        </div>';
+      html += '                    </div>';
+      html += '                </div>';
+      if(broeseMobile()){
+        html += '        </div>';
+
+        html += '        <div class="carousel-item item-slide-sessao6-mobile">';
+        html += '            <div class="container-baloes sessao6-container3 container-baloes-mobile">';
+        html += '                <div class="balao balao-verde balao-verde-mobile">';
+      }else{
+        html += '            <div class="container-baloes sessao6-container3">';
+        html += '                <div class="balao balao-verde">';
+      }
+      html += '                        <div class="conteudo-balao">';
+      html += '                            <i class="fas fa-map-marked-alt icone-balao-conversa"></i><br>';
+      html += '                            <p id="balao3" class="texto-baloes">';
+      html += '                                <img id="emoji_globo" alt="Emoji Globo" class="emoji-sessao6" src="./img/icone-globo.png" />';
+      html += '                            </p>';
+      html += '                        </div>';
+      html += '                    </div>';
+      html += '                </div>';
+      if(broeseMobile()){
+        html += '        </div>';
+
+        html += '        <div class="carousel-item item-slide-sessao6-mobile">';
+        html += '            <div class="container-baloes sessao6-container4 container-baloes-mobile">';
+        html += '                <div class="balao balao-branco balao-branco-mobile">';
+      }else{
+        html += '            <div class="container-baloes sessao6-container4">';
+        html += '                <div class="balao balao-branco">';
+      }
+      html += '                        <div class="conteudo-balao">';
+      html += '                            <i class="fas fa-box-open icone-balao-conversa"></i><br>';
+      html += '                            <p id="balao4" class="texto-baloes">';
+      html += '                                <img id="emoji_estrela" alt="Emoji Estrela" class="emoji-sessao6" src="./img/icone-estrela.png" />';
+      html += '                                <img id="emoji_festa" alt="Emoji Festa" class="emoji-sessao6" src="./img/icone-festa.png" />';
+      html += '                            </p>';
+      html += '                        </div>';
+      html += '                    </div>';
+      html += '                </div>';
+      if(broeseMobile()){
+        html += '        </div>';
+
+        html += '        <div class="carousel-item item-slide-sessao6-mobile">';
+        html += '            <div class="container-baloes sessao6-container5 container-baloes-mobile">';
+        html += '                <div class="balao balao-verde balao-verde-mobile">';
+      }else{
+        html += '            <div class="container-baloes sessao6-container5">';
+        html += '                <div class="balao balao-verde">';
+      }
+      html += '                        <div class="conteudo-balao">';
+      html += '                            <i class="fas fa-star icone-balao-conversa"></i><br>';
+      html += '                            <p id="balao5" class="texto-baloes">';
+      html += '                                <img id="emoji_rainha" alt="Emoji Rainha" class="emoji-sessao6" src="./img/icone-rainha.png" />';
+      html += '                                <img id="emoji_rei" alt="Emoji Rei" class="emoji-sessao6" src="./img/icone-rei.png" />';
+      html += '                            </p>';
+      html += '                        </div>';
+      html += '                     </div>';
+      html += '                </div>';
+      if(broeseMobile()){
+        html += '        </div>';
+        html += '    </div>';
+
+        html += '    <ol class="carousel-indicators rupo-selecao-slides">';
+        html += '        <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="item-grupo-selecao-slides active"></li>';
+        html += '        <li data-target="#carouselExampleIndicators3" data-slide-to="1" class="item-grupo-selecao-slides"></li>';
+        html += '        <li data-target="#carouselExampleIndicators3" data-slide-to="2" class="item-grupo-selecao-slides"></li>';
+        html += '        <li data-target="#carouselExampleIndicators3" data-slide-to="3" class="item-grupo-selecao-slides"></li>';
+        html += '        <li data-target="#carouselExampleIndicators3" data-slide-to="4" class="item-grupo-selecao-slides"></li>';
+        html += '    </ol>';
+        html += '</div>';
+      }
+
+      $(".grupo-baloes-sessao6").html(html);
+      html = "";
+      html += '<div class="carousel-item item-slide-bootstrap-sessao2 active">';
+      html += '    <div class="item-slide-produtos item-esquerdo" style="background-image: url(./img/fundo-slide1.png)" onclick="mostrarProdutoDetalhado(0);">';
+      html += '        <div class="container-imagem-item-slide-produto">';
+      html += `            <img id="img_produto_1" src="./img/products/${produtos[0].imagens[0]}" class="imagem-item-slide-produto" alt="Livetell + Starlink" loading="lazy">`;
+      html += '        </div>';
+      html += '        <div class="container-texto-item-slide-produto">';
+      html += `            <p class="titulo-item-slide-produto">${produtos[0].nome_produto}</p>`;
+      html += `            <p class="descricao-item-slide-produto">${produtos[0].descricao_simples}</p>`;
+      html += '        </div>';
+      html += '    </div>';
+      html += '    <div class="item-slide-produtos item-direito" style="background-image: url(./img/fundo-slide2.png)" onclick="mostrarProdutoDetalhado(1);">';
+      html += '        <div class="container-imagem-item-slide-produto">';
+      html += `            <img id="img_produto_16" src="./img/products/${produtos[1].imagens[0]}" class="imagem-item-slide-produto" alt="Internet Rural" loading="lazy">`;
+      html += '        </div>';
+      html += '        <div class="container-texto-item-slide-produto">';
+      html += `            <p class="titulo-item-slide-produto">${produtos[1].nome_produto}</p>`;
+      html += `            <p class="descricao-item-slide-produto">${produtos[1].descricao_simples}</p>`;
+      html += '        </div>';
+      html += '    </div>';
+      html += '</div>';
+      html += '<div class="carousel-item item-slide-bootstrap-sessao2 ">';
+      html += '    <div class="item-slide-produtos item-esquerdo" style="background-image: url(./img/fundo-slide3.png)" onclick="mostrarProdutoDetalhado(2);">';
+      html += '        <div class="container-imagem-item-slide-produto">';
+      html += `            <img id="img_produto_20" src="./img/products/${produtos[2].imagens[0]}" class="imagem-item-slide-produto" alt="Telefonia Rural" loading="lazy">`;
+      html += '        </div>';
+      html += '        <div class="container-texto-item-slide-produto">';
+      html += `            <p class="titulo-item-slide-produto">${produtos[2].nome_produto}</p>`;
+      html += `            <p class="descricao-item-slide-produto">${produtos[2].descricao_simples}</p>`;
+      html += '        </div>';
+      html += '    </div>';
+      html += '    <div class="item-slide-produtos item-direito" style="background-image: url(./img/fundo-slide4.png)" onclick="mostrarProdutoDetalhado(3);">';
+      html += '        <div class="container-imagem-item-slide-produto">';
+      html += `            <img id="img_produto_17" src="./img/products/${produtos[3].imagens[0]}" class="imagem-item-slide-produto" alt="Câmeras de segurança" loading="lazy">`;
+      html += '        </div>';
+      html += '        <div class="container-texto-item-slide-produto">';
+      html += `            <p class="titulo-item-slide-produto">${produtos[3].nome_produto}</p>`;
+      html += `            <p class="descricao-item-slide-produto">${produtos[3].descricao_simples}</p>`;
+      html += '        </div>';
+      html += '    </div>';
+      html += '</div>';
+      html += '<div class="carousel-item item-slide-bootstrap-sessao2 ">';
+      html += '    <div class="item-slide-produtos item-esquerdo" style="background-image: url(./img/fundo-slide1.png)" onclick="mostrarProdutoDetalhado(4);">';
+      html += '        <div class="container-imagem-item-slide-produto">';
+      html += `            <img id="img_produto_18" src="./img/products/${produtos[4].imagens[0]}" class="imagem-item-slide-produto" alt="Informática" loading="lazy">`;
+      html += '        </div>';
+      html += '        <div class="container-texto-item-slide-produto">';
+      html += `            <p class="titulo-item-slide-produto">${produtos[4].nome_produto}</p>`;
+      html += `            <p class="descricao-item-slide-produto">${produtos[4].descricao_simples}</p>`;
+      html += '        </div>';
+      html += '    </div>';
+      html += '    <div class="item-slide-produtos item-direito" style="background-image: url(./img/fundo-slide2.png)" onclick="mostrarProdutoDetalhado(5);">';
+      html += '        <div class="container-imagem-item-slide-produto">';
+      html += `            <img id="img_produto_19" src="./img/products/${produtos[5].imagens[0]}" class="imagem-item-slide-produto" alt="TV Digital " loading="lazy">`;
+      html += '        </div>';
+      html += '        <div class="container-texto-item-slide-produto">';
+      html += `            <p class="titulo-item-slide-produto">${produtos[5].nome_produto}</p>`;
+      html += `            <p class="descricao-item-slide-produto">${produtos[5].descricao_simples}</p>`;
+      html += '        </div>';
+      html += '    </div>';
+      html += '</div>';
+      $("#carousel_produtos").html(html);
+      html = "";
+        html += '<li data-target="#carouselExampleIndicators" data-slide-to="0" class="item-grupo-selecao-slides active"></li>';
+        html += '<li data-target="#carouselExampleIndicators" data-slide-to="1" class="item-grupo-selecao-slides "></li>';
+        html += '<li data-target="#carouselExampleIndicators" data-slide-to="2" class="item-grupo-selecao-slides "></li>';
+
+      $("#indicador_carousel_produtos").html(html);
+      postLoadElements();
+
+      mostrarProdutoDetalhado = function(indice) {
+        $("#imagem_produto_detalhado").attr("src", produtos[indice].imagens[0]);
+        $("#lista_imagens_produto_detalhado").html("");
+        $("#indicador_lista_imagens_produto_detalhado").html("");
+        let primeiro = 0;
+        let tamanho = produtos[indice].imagens.length;
+        for(let i = 0; i < tamanho; i++){
+          if(primeiro == 0){
+            html2 =  '<div class="carousel-item item-slide-bootstrap-sessao2 active">';
+            html3 = '<li data-target="#carouselImagemProdutoDetalhado" data-slide-to="' + primeiro + '" class="item-grupo-selecao-slides active"></li>';
+          }else{
+            html2 =  '<div class="carousel-item item-slide-bootstrap-sessao2">';
+            html3 = '<li data-target="#carouselImagemProdutoDetalhado" data-slide-to="' + primeiro + '" class="item-grupo-selecao-slides"></li>';
+          }
+          primeiro++;
+          html2 += '    <img src="./img/products/' + produtos[indice].imagens[i] + '" class="d-block item-slide-produtos item-slide-detalhado" alt="' + produtos[indice].nome_produto + '" loading="lazy">';
+          html2 += '</div>';
+          $("#lista_imagens_produto_detalhado").append(html2);
+          $("#indicador_lista_imagens_produto_detalhado").append(html3);
+        }
+        $("#titulo_produto_detalhado").html(produtos[indice].nome_produto);
+        if(produtos[indice].descricao_detalhada != "" && produtos[indice].descricao_detalhada != null && produtos[indice].descricao_detalhada != "nil"){
+          $("#descricao_produto_detalhado").html(produtos[indice].descricao_detalhada);
+        }else{
+          $("#descricao_produto_detalhado").html(produtos[indice].descricao_simples);
+        }
+        if(produtos[indice].url_produto != "" && produtos[indice].url_produto != null && produtos[indice].url_produto != "nil"){
+          $("#url_produto_detalhado").html("Para saber mais, clique <a href=\"" + produtos[indice].url_produto + "\" target=\"_blank\">aqui</a> e acesse a nossa loja no Mercado Livre.");
+          $("#url_produto_detalhado").removeClass("oculto");
+        }else{
+          $("#url_produto_detalhado").addClass("oculto");
+        }
+        $("#contaier_slide_produto_detalhado").modal('show');
+      }
+      verificalayoutMobile();
+    </script>
+    <!-- Modal caixa diálogo -->
+    <div id="contaier_caixa_dialogo"></div>
+    <!-- tela carregando -->
+    <div class="carregando">
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fal"
+        data-icon="spinner"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+        class="svg-inline--fa fa-spinner fa-w-16 fa-spin fa-lg icone-load"
+      >
+        <path
+          fill="currentColor"
+          d="M288 32c0 17.673-14.327 32-32 32s-32-14.327-32-32 14.327-32 32-32 32 14.327 32 32zm-32 416c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm256-192c0-17.673-14.327-32-32-32s-32 14.327-32 32 14.327 32 32 32 32-14.327 32-32zm-448 0c0-17.673-14.327-32-32-32S0 238.327 0 256s14.327 32 32 32 32-14.327 32-32zm33.608 126.392c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm316.784 0c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zM97.608 65.608c-17.673 0-32 14.327-32 32 0 17.673 14.327 32 32 32s32-14.327 32-32c0-17.673-14.327-32-32-32z"
+          class=""
+        ></path>
+      </svg>
+    </div>
+    <!-- Modal imagem ampliada -->
+    <div
+      class="modal fade"
+      id="modalImagemAmpliada"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header container-cabecalho-modal-produto-detalhado">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img
+              class="imagem-ampliada-tabela"
+              alt="imagem ampliada"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

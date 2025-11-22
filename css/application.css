@@ -34279,7 +34279,7 @@ input:checked + .slider:before {
   background-size: cover;
   position: relative;
   z-index: 1;
-  background-image: url("../img/banner_fundo1.jpg");
+  background-image: url("../img/banner_fundo1.png");
 }
 
 /* line 26, app/assets/stylesheets/login.scss */

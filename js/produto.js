@@ -35,7 +35,7 @@ const produtos = [
       '20_3.png'
     ]
   },
-  {
+  /*{
     "id_produto": "17",
     "nome_produto": "Câmeras de segurança",
     "descricao_simples": "Tenha seu estabelecimento ou residência mais seguros com a melhor qualidade de imagem e o melhor preço da região.\n\n   Acesso pelo celular onde quer que você esteja.\n\n   Faça o orçamento do seu projeto conosco, trabalhamos com câmeras via DVR e IP",
@@ -58,7 +58,7 @@ const produtos = [
       '18_2.png',
       '18_3.png'
     ]
-  },
+  },*/
   {
     "id_produto": "19",
     "nome_produto": "TV Digital ",

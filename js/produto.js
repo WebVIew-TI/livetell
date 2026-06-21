@@ -14,8 +14,8 @@ const produtos = [
   {
     "id_produto": "16",
     "nome_produto": "Internet Rural",
-    "descricao_simples": "Internet rural banda larga de alta velocidade!\nTemos EXCLUSIVA tecnologia para oferecer o melhor da internet em áreas rurais, com velocidade para trabalho e entretenimento, acessar notícias, redes sociais, assistir vídeos e séries  e muito mais!\n\nEntre em contato conosco e faça já seu agendamento!",
-    "descricao_detalhada": "Trabalhamos em parceria com a maiores operadoras do país, VIVO, TIM E CLARO.\n\nTecnologias embarcadas:\n\n5G NSA\n4G LTE",
+    "descricao_simples": "Internet rural banda larga de alta velocidade!\n\nTemos EXCLUSIVA tecnologia para oferecer o melhor da internet em áreas rurais, com velocidade e estabilidade para trabalho, entretenimento, acessar notícias, redes sociais, assistir streamings e muito mais!\n\nEntre em contato conosco e faça já seu agendamento!",
+    "descricao_detalhada": "Navegue na ultravelocidade do 5G + WI-FI6 Gibabit – Plano ilimitado",
     "url_produto": "",
     "imagens": [
       '16_1.png',
